@@ -82,3 +82,12 @@ set diffopt+=vertical
 
 " Disable automatic insertion of additional comments
 set formatoptions-=cro
+
+" Pre-populate a split command with the current directory
+nmap <leader>v :vnew <C-r>=escape(expand("%:p:h"), ' ') . '/'<cr>
+
+" Edit your vimrc in a new tab
+nmap <leader>vi :tabedit ~/.vimrc<cr>
+
+" Keep at least 4 lines below cursor
+set scrolloff=4
