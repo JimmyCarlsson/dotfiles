@@ -3,7 +3,7 @@
 [push]
   default = current
 [color]
-  ui = auto
+  ui = true
 [alias]
   aa = add --all
   ap = add --patch

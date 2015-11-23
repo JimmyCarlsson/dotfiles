@@ -1,0 +1,16 @@
+# This is a vim cheat sheet, containing useful commands and local bindings
+
+# Moving cursor around
+w # Jump to next word
+e # Jump to end of current word
+b # Jump to previous word
+f[char] # Jump to next occurence of [char]
+F[char] # Jump to previous occurence of [char]
+t[char] # Jump to the character before the next occurence of [char]
+Ctrl+D # Move down half a screen
+Ctrl+U # Move up half a screen
+:noh # Turn of highlights
+
+# Commands
+. # Repeat command
+, # Reverse command

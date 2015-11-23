@@ -70,8 +70,9 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
-" Map Ctrl-D to leave inout mode and automatically write file
-imap <C-d> <esc>:w<cr>
+" Map Ctrl-D to leave input mode and automatically write file
+imap <C-a> <esc>:w<CR>
+nmap <C-a> :w<CR>
 
 " Map jk and kj combinations to exit input mode
 imap jk <esc>
@@ -91,3 +92,7 @@ nmap <leader>vi :tabedit ~/.vimrc<cr>
 
 " Keep at least 4 lines below cursor
 set scrolloff=4
+
+" Open cheat sheet in new tab
+nmap <leader>cs :tabedit ~/.vimcheatsheet<CR>
+
