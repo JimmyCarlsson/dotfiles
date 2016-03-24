@@ -1,3 +1,50 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" rspec plugin
+Plugin 'thoughtbot/vim-rspec'
+
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+" plugin on GitHub repo
+"Plugin 'tpope/vim-fugitive'
+" plugin from http://vim-scripts.org/vim/scripts.html
+"Plugin 'L9'
+" Git plugin not hosted on GitHub
+"Plugin 'git://git.wincent.com/command-t.git'
+" git repos on your local machine (i.e. when working on your own plugin)
+"Plugin 'file:///home/gmarik/path/to/plugin'
+" The sparkup vim script is in a subdirectory of this repo called vim.
+" Pass the path to set the runtimepath properly.
+"Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+" Install L9 and avoid a Naming conflict if you've already installed a
+" different version somewhere else.
+"Plugin 'ascenator/L9', {'name': 'newL9'}
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+
 " Leader
 let mapleader = " "
 
@@ -40,8 +87,9 @@ if executable('ag')
 endif
 
 " Numbers
-set number
+set relativenumber
 set numberwidth=5
+set number
 
 " Get off my lawn
 nnoremap <Left> :echoe "Use h"<CR>
@@ -107,3 +155,20 @@ autocmd VimLeave * silent !echo -ne "\033]112\007"
 "use \003]12;gray\007 for gnome-terminal and rxvt
 " up to version 9.21
 endif
+
+" Searching
+set hlsearch " Highlight all search results until cleared with :nohlsearch
+set ignorecase "Ignore case when searching"
+set smartcase "Override ignorecase if search contains upcase character"
+
+" Windows split sizes
+set winwidth=84
+set winheight=5
+set winminheight=5
+set winheight=999
+
+" RSpec mappings
+map <Leader>tf :call RunCurrentSpecFile()<CR>
+map <Leader>tn :call RunNearestSpec()<CR>
+map <Leader>tl :call RunLastSpec()<CR>
+map <Leader>ta :call RunAllSpecs()<CR>
