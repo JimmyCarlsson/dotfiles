@@ -42,7 +42,6 @@ q/ or ctrl+f # Opens search buffer where you can edit past searches
 
 # Search and replace
 :%s/from/to/g # Replaces all occurances of 'from' with 'to' in current file without confirmation
-:%s/from/to/g # Replaces all occurances of 'from' with 'to' in current line without confirmation
 :43,67s/from/to/gi # Replaces all occurances of 'from' with 'to' in current file between line number 43 and 67, case insensitive (flag 'i')
 
 # Copy & Paste
