@@ -12,6 +12,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 " rspec plugin
 Plugin 'thoughtbot/vim-rspec'
+" run :PluginInstall to install plugins
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
