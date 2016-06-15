@@ -1,5 +1,6 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
+colorscheme molokai
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -12,6 +13,8 @@ Plugin 'VundleVim/Vundle.vim'
 
 " rspec plugin
 Plugin 'thoughtbot/vim-rspec'
+Plugin 'tomasr/molokai'
+Plugin 'jpo/vim-railscasts-theme'
 " run :PluginInstall to install plugins
 
 " The following are examples of different formats supported.
@@ -176,3 +179,4 @@ map <Leader>tl :call RunLastSpec()<CR>
 map <Leader>ta :call RunAllSpecs()<CR>
 
 set clipboard=unnamed
+map <Leader><Leader> :noh<CR>
