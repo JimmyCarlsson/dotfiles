@@ -1,6 +1,5 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
-
 set t_Co=256 "Set colors to 256
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -15,6 +14,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'tomasr/molokai'
 Plugin 'jpo/vim-railscasts-theme'
+Plugin 'mustache/vim-mustache-handlebars'
 " run :PluginInstall to install plugins
 
 " The following are examples of different formats supported.
