@@ -1,7 +1,7 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
-colorscheme molokai
 
+set t_Co=256 "Set colors to 256
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -147,7 +147,7 @@ nmap <leader>vi :tabedit ~/.vimrc<cr>
 set scrolloff=4
 
 " Open cheat sheet in new tab
-nmap <leader>cs :tabedit ~/.vimcheatsheet<CR>
+nmap <leader>cs :tabedit /code/dotfiles/vimcheatsheet<CR>
 
 if &term =~ "xterm\\|rxvt"
 " use an orange cursor in insert mode
@@ -160,7 +160,6 @@ autocmd VimLeave * silent !echo -ne "\033]112\007"
 "use \003]12;gray\007 for gnome-terminal and rxvt
 " up to version 9.21
 endif
-
 " Searching
 set hlsearch " Highlight all search results until cleared with :nohlsearch
 set ignorecase "Ignore case when searching"
@@ -180,3 +179,7 @@ map <Leader>ta :call RunAllSpecs()<CR>
 
 set clipboard=unnamed
 map <Leader><Leader> :noh<CR>
+
+
+" Default colorscheme
+colorscheme molokai
