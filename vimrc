@@ -15,6 +15,7 @@ Plugin 'thoughtbot/vim-rspec'
 Plugin 'tomasr/molokai'
 Plugin 'jpo/vim-railscasts-theme'
 Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'leafoftree/vim-vue-plugin'
 " run :PluginInstall to install plugins
 
 " The following are examples of different formats supported.
